@@ -1,0 +1,15 @@
+.row__posters {
+  /* flex box here to arrange the page into row format*/
+  display: flex;
+}
+
+.row__poster {
+  object-fit: contain;
+  width: 50%;
+  max-height: 100px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+
+.row__poster:hover {
+}
