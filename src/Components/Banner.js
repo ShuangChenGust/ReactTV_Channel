@@ -25,10 +25,10 @@ function Banner() {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
 
-  const handle = () => {
-    const w = window.open("about:blank");
-    w.location.href = "www.google.com";
-  };
+  //   const handle = () => {
+  //     const w = window.open("about:blank");
+  //     w.location.href = "www.google.com";
+  //   };
 
   return (
     <header
@@ -39,24 +39,29 @@ function Banner() {
         backgroundPosition: "center center",
       }}
     >
-      <div className="banner__contents"></div>
-      <h1 className="banner__title">
-        {movie?.title || movie?.name || movie?.original_name}
-      </h1>
-      <div>
-        <button
-          className="banner__button"
-          onClick={() => {
-            window.location.href = "https://www.themoviedb.org/"; //https://www.themoviedb.org/search?query=${movie?.name}
-          }}
-        >
-          Play Now
-        </button>
-        <button className="banner__button">My List</button>
-      </div>
-      <h1 className="banner__description">{truncate(movie?.overview, 200)}</h1>
+      <div className="banner__contents">
+        <h1 className="banner__title">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
+        <div className="banner__buttons">
+          <button
+            className="banner__button"
+            onClick={() => {
+              window.location.href = "https://www.themoviedb.org/"; //https://www.themoviedb.org/search?query=${movie?.name}
+            }}
+          >
+            Play Now
+          </button>
+          <button className="banner__button">My List</button>
+        </div>
 
-      <title></title>
+        <h1 className="banner__description">
+          {truncate(movie?.overview, 200)}
+        </h1>
+      </div>
+
+      <div className="banner__fadeBottom" />
+      {/* <title></title> */}
     </header>
   );
 }

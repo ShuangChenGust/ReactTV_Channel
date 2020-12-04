@@ -2,13 +2,14 @@ import "./App.css";
 import Row from "./Components/Row";
 import requests from "./request";
 import Banner from "./Components/Banner";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="Header">React TV Demo</h1>
-      <h2 className="Header">On Demand</h2>
-      {/* <Nav>*/}
+      {/* <h1 className="Header">React TV Demo</h1>
+      <h2 className="Header">On Demand</h2> */}
+      <Navbar />
       <Banner />
       <Row
         title="Most pupolar"
