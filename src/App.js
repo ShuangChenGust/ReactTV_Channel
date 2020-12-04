@@ -6,8 +6,8 @@ import Banner from "./Components/Banner";
 function App() {
   return (
     <div className="App">
-      <h1>React TV Demo</h1>
-      <h2>On Demand</h2>
+      <h1 className="Header">React TV Demo</h1>
+      <h2 className="Header">On Demand</h2>
       {/* <Nav>*/}
       <Banner />
       <Row
