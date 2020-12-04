@@ -1,6 +1,17 @@
+.row {
+  margin-left: 10px;
+}
+
 .row__posters {
   /* flex box here to arrange the page into row format*/
   display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 10px;
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
 }
 
 .row__poster {
@@ -10,6 +21,16 @@
   margin-right: 10px;
   transition: transform 450ms;
 }
-
+/* used the transform and transition together can have a good animation effect. */
 .row__poster:hover {
+  transform: scale(1.1);
+}
+
+.row__posterLarge {
+  max-height: 300px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.2);
+  opacity: 1;
 }
